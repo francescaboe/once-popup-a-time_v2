@@ -25,7 +25,9 @@ function App() {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
           {t(STORY[storyIndex].title)}
         </h2>
-        <p className="text-base md:text-lg lg:text-xl">{t(STORY[storyIndex].content)}</p>
+        <p className="text-base md:text-lg lg:text-xl h-40 w-3/4 mx-auto overflow-y-auto flex items-center">
+          {t(STORY[storyIndex].content)}
+        </p>
       </div>
       <div className="w-64 h-64 border-8 border-amber-200 bg-amber-300 shadow-lg rounded-sm flex items-center justify-center text-gray-400 mb-8">
         Space for picture
