@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development --port 3000",
     "build": "set NODE_ENV=production && webpack",
+    "deploy": "gh-pages -d dist",
     "test": "jest"
   },
   "author": "darkchesca",
@@ -31,6 +32,7 @@
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-testing-library": "^6.2.2",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
