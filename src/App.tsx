@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { STORY } from 'utils/constants';
 import useKeyPress from 'hooks/useKeyPress';
+import useSwipe from './hooks/useSwipe';
 
 function App() {
   const { t } = useTranslation();
@@ -19,8 +20,13 @@ function App() {
 
   useKeyPress('ArrowRight', handleNextClick);
 
+  const swipeHandlers = useSwipe(handleNextClick, handlePrevClick);
+
   return (
-    <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
+    <main
+      className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4"
+      {...swipeHandlers}
+    >
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
           {t(STORY[storyIndex].title)}
