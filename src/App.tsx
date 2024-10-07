@@ -31,7 +31,7 @@ function App() {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
           {t(STORY[storyIndex].title)}
         </h2>
-        <p className="text-base md:text-lg lg:text-xl h-40 w-3/4 mx-auto overflow-y-auto flex items-center">
+        <p className="text-base md:text-lg lg:text-xl h-40 md:w-3/4 mx-auto overflow-y-auto flex items-center">
           {t(STORY[storyIndex].content)}
         </p>
       </div>
