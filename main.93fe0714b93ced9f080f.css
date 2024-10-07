@@ -569,9 +569,6 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
-.w-3\/4 {
-  width: 75%;
-}
 .w-64 {
   width: 16rem;
 }
@@ -700,6 +697,10 @@ video {
     display: block;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -723,4 +724,4 @@ video {
   }
 }
 
-/*# sourceMappingURL=main.b28c98754c6116503fde.css.map*/
+/*# sourceMappingURL=main.93fe0714b93ced9f080f.css.map*/
