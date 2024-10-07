@@ -16,7 +16,7 @@ module.exports = {
   // Defines where the bundled files will be saved.
   output: {
     // The path where the output files will be placed.
-    path: path.resolve(__dirname, 'build'), // Use path.resolve for absolute paths
+    path: path.resolve(__dirname, 'dist'), // Use path.resolve for absolute paths
     publicPath: '/', // Specifies the public URL of the output directory when referenced in a browser. ???? verify this
   },
   module: {
