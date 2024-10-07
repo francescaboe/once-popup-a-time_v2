@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "components": [
+        "./components"
+      ],
+      "utils": [
+        "./utils"
+      ],
+      "test-utils": [
+        "./test-utils/test-utils.tsx"
+      ],
+      "hooks": ["./hooks"]
+    },
+    // flag fixes default and namespace imports from CommonJS to TS.
+    "esModuleInterop": true,
+    // tells TS how to treat JSX files
+    "jsx": "react",
+    // the option tells TS how to transpile ES6 imports and exports
+    // (esnext) leaves them unchanged. I recommend setting always esnext to leave this job to webpack.
+    "module": "esnext",
+    // historically TS used to resolve modules in other way than Node.js, so this must be set to node
+    "moduleResolution": "node",
+    //  this option tells TS which libraries will exist in your target environment, so TS implicitly imports their types.
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    // enables all TS type checks
+    "strict": false,
+    // enables TS emitting source maps. We will configure webpack to ignore source maps in production builds.
+    "sourceMap": true,
+    // configures target ES version which depends on your users
+    // TODO might need to change to Target ES version
+    // see https://dev.to/alekseiberezkin/setting-up-react-typescript-app-without-create-react-app-oph#:~:text=14.1.%20Target%20ES%20version
+    "target": "esnext", // es2018 for average user / catches older versions
+    "types": ["jest", "@testing-library/jest-dom"],
+    // resolves json files
+    "resolveJsonModule": true
+  },
+  // this option excludes libs from typechecking and transpiling; however your code is still checked against typedefs provided by libs.
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+// for more documentation see https://www.typescriptlang.org/tsconfig

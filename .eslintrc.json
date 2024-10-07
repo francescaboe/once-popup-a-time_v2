@@ -1,0 +1,56 @@
+{
+    // Shared environment settings
+    "env": {
+        "browser": true, // Enable browser globals such as `window` and `document`
+        "es2021": true, // Enable ES2021 global variables and syntax
+        "jest": true // Enable Jest testing environment (added)
+    },
+    // Combined extends array from both configurations
+    "extends": [
+        "eslint:recommended", // Use ESLint's recommended rules for general JavaScript/TypeScript linting
+        "plugin:@typescript-eslint/recommended", // Use recommended TypeScript-specific rules
+        "plugin:react/recommended", // Use recommended rules for React
+        "prettier" // Integrate with Prettier for code formatting consistency
+    ],
+    // Shared parser and parserOptions settings
+    "parser": "@typescript-eslint/parser", // Use TypeScript parser
+    "parserOptions": {
+        "ecmaVersion": "latest", // Use the latest ECMAScript version
+        "sourceType": "module" // Specify source type as module
+    },
+    // Combined plugins array from both configurations
+    "plugins": [
+        "@typescript-eslint", // Enable TypeScript-specific ESLint rules
+        "react", // Enable ESLint rules for React
+        "react-hooks", // Enable ESLint rules for React hooks
+        "prettier" // Integrate with Prettier for code formatting consistency
+    ],
+    // Combined rules from both configurations
+    "rules": {
+        // let eslint enforce prettier formatting
+        "prettier/prettier": "error",
+        "react/react-in-jsx-scope": "off",
+        "import/no-unresolved": "off",
+        "import/no-named-as-default-member": "off"
+    },
+    // Shared settings section
+    "settings": {
+        "import/resolver": {
+            "typescript": {} // Specify TypeScript resolver
+        }
+    },
+    // Combined overrides section from both configurations
+    "overrides": [
+        {
+            // Enabling eslint-plugin-testing-library rules or preset only for matching testing files
+            "files": ["**/tests/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+            "extends": ["plugin:testing-library/react"] // Extend testing-library rules (added)
+        },
+        {
+            "files": ["**/*.test.js"],
+            "rules": {
+                "react/prop-types": 0 // Disable react/prop-types rule for test files
+            }
+        }
+    ]
+}
