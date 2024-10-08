@@ -96,6 +96,10 @@ module.exports = {
     },*/
     // doesn't override, it extends current keyframes etc
     extend: {
+      fontFamily: {
+        gothic: ['UnifrakturMaguntia', 'cursive'],
+        fable: ['Fondamento', 'cursive'],
+      },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
