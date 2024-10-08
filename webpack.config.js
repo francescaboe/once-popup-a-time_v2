@@ -3,6 +3,7 @@ const prod = process.env.NODE_ENV === 'production';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // Import CopyWebpackPlugin
 const path = require('path');
 
 module.exports = {
@@ -63,9 +64,13 @@ module.exports = {
     }),
     // MiniCssExtractPlugin extracts CSS into separate files.
     // It creates a CSS file per JS file which contains CSS.
-    new MiniCssExtractPlugin(/*{
-      filename: '[name].[contenthash].css',
-    }*/),
+    new MiniCssExtractPlugin(),
+    // CopyWebpackPlugin is used to copy assets from the public folder to the output folder.
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'public/locales'), to: 'locales' }, // Copies locales to dist/locales
+      ],
+    }),
   ],
   // Sets up the development server configuration.
   devServer: {
