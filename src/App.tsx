@@ -32,7 +32,10 @@ function App() {
           {t(STORY[storyIndex].title)}
         </h2>
         <p className="text-base md:text-lg lg:text-xl h-40 md:w-3/4 mx-auto overflow-y-auto flex items-center">
-          {t(STORY[storyIndex].content)}
+          {('ontouchstart' in window || navigator.maxTouchPoints > 0) &&
+          STORY[storyIndex].content_touchscreen
+            ? t(STORY[storyIndex].content_touchscreen)
+            : t(STORY[storyIndex].content)}
         </p>
       </div>
       <div className="w-64 h-64 border-8 border-amber-200 bg-amber-300 shadow-lg rounded-sm flex items-center justify-center text-gray-400 mb-8">

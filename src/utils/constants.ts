@@ -2,6 +2,7 @@ export const STORY = [
   {
     title: 'title_1',
     content: 'content_1',
+    content_touchscreen: 'content_1_touchscreen',
   },
   {
     title: 'title_2',
