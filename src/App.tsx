@@ -36,7 +36,7 @@ function App() {
         </p>
       </div>
       <div className="w-64 h-64 border-8 border-amber-200 bg-amber-300 shadow-lg rounded-sm flex items-center justify-center text-gray-400 mb-8">
-        Space for picture
+        Space for picture!
       </div>
       <div className="flex space-x-4">
         <button

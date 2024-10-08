@@ -9,7 +9,7 @@ module.exports = {
   // Sets the mode for the build process (development or production).
   // In production mode, Webpack will optimize the build (e.g., minification).
   // In development mode, Webpack will include source maps and won't minify the code.
-  mode: 'production', //prod ? 'production' : 'development',
+  mode: prod ? 'production' : 'development',
   // Specifies the entry point for your application.
   // This is where Webpack will start bundling your code.
   entry: './src/index.tsx',
@@ -17,9 +17,9 @@ module.exports = {
   output: {
     // The path where the output files will be placed.
     path: path.resolve(__dirname, 'dist'), // Use path.resolve for absolute paths
-    filename: '[name].[contenthash].js', // publicPath: '/' // Specifies the public URL of the output directory when referenced in a browser. ???? verify this
-    publicPath: '/once-popup-a-time_v2/', //prod ? '/your-repo-name/' : '/',
-    clean: true,
+    publicPath: prod ? '/once-popup-a-time_v2/' : '/', // Specifies the public URL of the output directory when referenced in a browser. ???? verify this
+    /*filename: '[name].[contenthash].js',
+    clean: true*/
   },
   module: {
     // Determines how different file types should be processed.
@@ -52,7 +52,8 @@ module.exports = {
     ],
   },
   // Sets the config for source maps, which help in debugging by mapping the compiled code back to the original source code.
-  devtool: 'source-map', //prod ? 'source-map' : 'eval-source-map',
+  devtool: prod ? 'source-map' : 'eval-source-map',
+  // Configures additional plugins.
   plugins: [
     // HtmlWebpackPlugin simplifies creation of HTML files to serve your bundles.
     // This is especially useful for including the generated bundles automatically.
@@ -62,9 +63,9 @@ module.exports = {
     }),
     // MiniCssExtractPlugin extracts CSS into separate files.
     // It creates a CSS file per JS file which contains CSS.
-    new MiniCssExtractPlugin({
+    new MiniCssExtractPlugin(/*{
       filename: '[name].[contenthash].css',
-    }), //new MiniCssExtractPlugin(),
+    }*/),
   ],
   // Sets up the development server configuration.
   devServer: {
