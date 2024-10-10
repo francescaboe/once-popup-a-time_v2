@@ -40,7 +40,6 @@
     width: 250px;
     height: 350px;
     transform: translateZ(35px);
-    background-color: #602929;
     border-radius: 0 2px 2px 0;
     box-shadow: 5px 5px 20px #666;
 }
