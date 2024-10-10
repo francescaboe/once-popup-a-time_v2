@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { STORY } from 'utils/constants';
 import useKeyPress from 'hooks/useKeyPress';
-import useSwipe from './hooks/useSwipe';
+import useSwipe from 'hooks/useSwipe';
 
 function App() {
   const { t } = useTranslation();

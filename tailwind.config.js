@@ -96,6 +96,9 @@ module.exports = {
     },*/
     // doesn't override, it extends current keyframes etc
     extend: {
+      perspective: {
+        '500': '500px',
+      },
       fontFamily: {
         gothic: ['UnifrakturMaguntia', 'cursive'],
         fable: ['Fondamento', 'cursive'],
