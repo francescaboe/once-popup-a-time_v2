@@ -34,7 +34,7 @@ function App() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-gothic mt-4 mb-2">
             {t(STORY[storyIndex].title)}
           </h2>
-          <div className="w-80 h-64 border-8 border-amber-200 bg-amber-300 shadow-lg rounded-sm flex items-center justify-center text-gray-400 mb-2">
+          <div className="w-80 h-64 border-8 border-amber-200 bg-amber-300 shadow-lg rounded-sm flex items-center justify-center text-gray-400 mb-2 transform hover:scale-105 transition-transform duration-300">
             Space for picture!
           </div>
           <p className="text-base md:text-lg min-h-32 md:min-h-44 md:w-3/4 mt-4 overflow-y-auto font-fable">
