@@ -37,8 +37,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 350px;
     transform: translateZ(35px);
     border-radius: 0 2px 2px 0;
     box-shadow: 5px 5px 20px #666;

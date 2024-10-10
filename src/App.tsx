@@ -56,7 +56,7 @@ function App() {
       <div className="book-container">
         <div className="book">
           {storyIndex === 0 ? (
-            <div className="flex flex-col items-center justify-center gap-2 bg-gradient-to-l from-amber-900 to-amber-950">
+            <div className="flex flex-col items-center justify-center gap-2 bg-gradient-to-l from-amber-900 to-amber-950 w-[250px] h-[350px]">
               <h1 className="text-center font-bold font-gothic text-4xl">{t(STORY[0].title)}</h1>
               <p className="p-2 text-sm text-center">
                 {('ontouchstart' in window || navigator.maxTouchPoints > 0) &&
@@ -66,7 +66,7 @@ function App() {
               </p>
             </div>
           ) : (
-            <div className="flex flex-col items-center p-4 bg-amber-100 shadow-lg max-w-md md:max-w-lg text-amber-950 relative overflow-hidden">
+            <div className="flex flex-col items-center p-4 bg-amber-100 shadow-lg max-w-md md:max-w-lg text-amber-950 relative overflow-hidden w-[237px] h-[339px] mt-[5px]">
               {/* Gradient overlay top */}
               <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-amber-200 to-transparent"></div>
               <div className=" text-center flex flex-col items-center justify-evenly h-full">
