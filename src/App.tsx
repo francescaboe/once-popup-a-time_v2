@@ -40,8 +40,12 @@ function App() {
                 className={`${isFlipped ? 'flipped' : ''} page flex flex-col items-center justify-center gap-2 bg-gradient-to-l from-amber-900 to-amber-950 w-[250px] h-[350px]`}
               />
               <div className=" page flex flex-col items-center justify-center gap-2 bg-gradient-to-l from-amber-900 to-amber-950 w-[250px] h-[350px]">
-                <h1 className="text-center font-bold font-gothic text-4xl">{t(STORY[0].title)}</h1>
-                <p className="p-2 text-sm text-center">
+                <h1
+                  className={`${isFlipped ? 'flipped' : ''} text-center font-bold font-gothic text-4xl`}
+                >
+                  {t(STORY[0].title)}
+                </h1>
+                <p className={`${isFlipped ? 'flipped' : ''} 'p-2 text-sm text-center'`}>
                   {('ontouchstart' in window || navigator.maxTouchPoints > 0) &&
                   STORY[0].content_touchscreen
                     ? t(STORY[0].content_touchscreen)
@@ -59,7 +63,9 @@ function App() {
               >
                 {/* Gradient overlay top */}
                 <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-amber-200 to-transparent"></div>
-                <div className=" text-center flex flex-col items-center justify-evenly h-full">
+                <div
+                  className={`${isFlipped ? 'flipped' : ''} text-center flex flex-col items-center justify-evenly h-full`}
+                >
                   <h2 className="text-2xl font-bold font-gothic mt-4 mb-2">
                     {t(STORY[storyIndex].title)}
                   </h2>
